@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun, festive font */
+            background-color: #ffe0f0; /* Light pink background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .birthday-card {
+            background-color: #ffffff; /* White card background */
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow */
+            padding: 40px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%; /* Responsive width */
+            position: relative;
+            overflow: hidden;
+            border: 5px solid #ff69b4; /* Pink border */
+        }
+        .birthday-card::before {
+            content: '🎉'; /* Confetti emoji */
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 3em;
+            transform: rotate(-20deg);
+        }
+        .birthday-card::after {
+            content: '🎂'; /* Cake emoji */
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 3em;
+            transform: rotate(20deg);
+        }
+        h1 {
+            color: #ff4500; /* Orange-red for heading */
+            font-size: 3.5em; /* Large heading */
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            color: #333333;
+            font-size: 1.3em;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+        .signature {
+            font-style: italic;
+            color: #666666;
+            font-size: 1.1em;
+            margin-top: 30px;
+        }
+        .emoji {
+            font-size: 4em; /* Larger emoji */
+            margin-bottom: 20px;
+            display: block; /* Ensures it's on its own line */
+        }
+    </style>
+</head>
+<body>
+    <div class="birthday-card">
+        <span class="emoji">🥳</span>
+        <h1>Happy Birthday!</h1>
+        <p>Wishing you a day filled with joy, laughter, and all the happiness in the world!</p>
+        <p>May your special day be as amazing as you are.</p>
+        <div class="signature">
+            With love,<br>
+            Laxman Singh
+        </div>
+    </div>
+</body>
+</html>
