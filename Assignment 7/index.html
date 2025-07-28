@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahendra Singh Dhoni - Wikipedia</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>Mahendra Singh Dhoni</h1>
+            <p class="subtitle">"Captain Cool", "Mahi"</p>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Sidebar for Quick Facts -->
+            <aside class="sidebar">
+                <div class="info-box">
+                    <img src="https://placehold.co/250x300/e0e0e0/333333?text=MS+Dhoni" alt="Mahendra Singh Dhoni" class="profile-image">
+                    <h3>Mahendra Singh Dhoni</h3>
+                    <ul>
+                        <li><strong>Born:</strong> 7 July 1981 (age 43)</li>
+                        <li><strong>Birthplace:</strong> Ranchi, Bihar (now Jharkhand), India</li>
+                        <li><strong>Role:</strong> Wicket-keeper-batsman</li>
+                        <li><strong>Batting:</strong> Right-handed</li>
+                        <li><strong>Bowling:</strong> Right-arm medium</li>
+                        <li><strong>Nickname(s):</strong> Mahi, MSD, Captain Cool</li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Article Content -->
+            <article class="article">
+                <section class="section">
+                    <h2>Early Life and Background</h2>
+                    <p>
+                        Mahendra Singh Dhoni was born in Ranchi, Bihar (now in Jharkhand) to Pan Singh and Devaki Devi. His ancestral village is Lwali, in the Lamgara block of Almora District, Uttarakhand. Dhoni studied at DAV Jawahar Vidya Mandir, Shyamali, Ranchi, Jharkhand where he initially excelled in various sports including badminton and football. He was a goalkeeper for his school football team and was sent to play cricket by his football coach.
+                    </p>
+                    <p id="early-life-more" class="hidden-text">
+                        Despite his interest in sports, Dhoni initially worked as a Train Ticket Examiner (TTE) at Kharagpur railway station from 2001 to 2003, a period he often describes as challenging but formative. His passion for cricket, however, never waned, leading him to pursue the sport professionally.
+                    </p>
+                    <button id="toggle-early-life" class="read-more-btn">Read More</button>
+                </section>
+
+                <section class="section">
+                    <h2>Cricket Career</h2>
+                    <p>
+                        Dhoni made his One Day International (ODI) debut on 23 December 2004 against Bangladesh. He quickly rose through the ranks, known for his aggressive batting style and calm demeanor. He took over the ODI captaincy from Rahul Dravid in 2007 and led India to victory in the 2007 ICC World Twenty20.
+                    </p>
+                    <p>
+                        Under his captaincy, India achieved numerous milestones, including winning the 2011 Cricket World Cup, the 2013 ICC Champions Trophy, and reaching the No. 1 ranking in Test cricket. He is widely regarded as one of the greatest captains in the history of cricket.
+                    </p>
+                </section>
+
+                <section class="section">
+                    <h2>Achievements and Records</h2>
+                    <ul>
+                        <li>Only captain to win all three ICC limited-overs trophies (World Cup, Champions Trophy, World T20).</li>
+                        <li>Most dismissals by an Indian wicket-keeper in Tests and ODIs.</li>
+                        <li>Fastest Indian wicket-keeper to reach 100 stumpings in ODIs.</li>
+                        <li>Recipient of the Padma Bhushan, India's third-highest civilian award, in 2018.</li>
+                        <li>Recipient of the Padma Shri, India's fourth-highest civilian award, in 2009.</li>
+                        <li>Recipient of the Rajiv Gandhi Khel Ratna award, India's highest honor in sports, in 2007–08.</li>
+                    </ul>
+                </section>
+
+                <section class="section">
+                    <h2>Personal Life</h2>
+                    <p>
+                        Dhoni married Sakshi Singh Rawat, his schoolmate, on 4 July 2010. They have a daughter named Ziva. Beyond cricket, Dhoni has interests in motorcycling and football, owning a significant collection of bikes. He also holds the honorary rank of Lieutenant Colonel in the Indian Territorial Army.
+                    </p>
+                </section>
+            </article>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <p>&copy; 2024 Simple Wikipedia Clone. Content for educational purposes only.</p>
+        </footer>
+    </div>
+
+    <script>
+        // JavaScript for "Read More" functionality
+        const toggleButton = document.getElementById('toggle-early-life');
+        const hiddenText = document.getElementById('early-life-more');
+
+        toggleButton.addEventListener('click', () => {
+            if (hiddenText.classList.contains('hidden-text')) {
+                hiddenText.classList.remove('hidden-text');
+                toggleButton.textContent = 'Read Less';
+            } else {
+                hiddenText.classList.add('hidden-text');
+                toggleButton.textContent = 'Read More';
+            }
+        });
+    </script>
+</body>
+</html>
 
