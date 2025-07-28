@@ -1,1 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medium - Simple Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="logo">Medium</a>
+            <div class="nav-links">
+                <a href="#">Our Story</a>
+                <a href="#">Sign In</a>
+                <button class="get-started-btn">Get Started</button>
+            </div>
+            <button id="mobile-menu-toggle" class="mobile-menu-toggle">☰</button>
+        </nav>
+        <div id="mobile-nav" class="mobile-nav hidden">
+            <a href="#">Our Story</a>
+            <a href="#">Sign In</a>
+            <button class="get-started-btn">Get Started</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Stay curious.</h1>
+            <p>Discover stories, thinking, and expertise.</p>
+            <button class="hero-btn">Start reading</button>
+        </div>
+        <div class="hero-image">
+            <img src="https://placehold.co/200x200/FFC017/292929?text=Medium" alt="Medium Logo Placeholder">
+        </div>
+    </section>
+
+    <!-- Trending Section -->
+    <section class="trending-section">
+        <h2>Trending on Medium</h2>
+        <div class="trending-articles">
+            <div class="article-card">
+                <span class="article-number">01</span>
+                <div>
+                    <p class="author">Author Name</p>
+                    <h3>Trending Article Title One</h3>
+                    <p class="meta">Dec 15, 2023 · 5 min read</p>
+                </div>
+            </div>
+            <div class="article-card">
+                <span class="article-number">02</span>
+                <div>
+                    <p class="author">Another Author</p>
+                    <h3>Second Trending Article Title</h3>
+                    <p class="meta">Jan 01, 2024 · 7 min read</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="main-content">
+        <div class="articles-list">
+            <div class="full-article-card">
+                <div class="article-text">
+                    <p class="author">Article Author Name</p>
+                    <h3>The Importance of Good Design</h3>
+                    <p class="description">A deep dive into how thoughtful design principles can elevate user experience.</p>
+                    <p class="meta">Jul 25, 2024 · 8 min read <span class="tag">Web Development</span></p>
+                </div>
+                <div class="article-image">
+                    <img src="https://placehold.co/150x100/d1d1d1/4a4a4a?text=Image" alt="Article Thumbnail">
+                </div>
+            </div>
+            <div class="full-article-card">
+                <div class="article-text">
+                    <p class="author">Another Writer</p>
+                    <h3>Understanding JavaScript Frameworks</h3>
+                    <p class="description">An exploration of popular JavaScript frameworks like React, Vue, and Angular.</p>
+                    <p class="meta">Jul 20, 2024 · 12 min read <span class="tag">JavaScript</span></p>
+                </div>
+                <div class="article-image">
+                    <img src="https://placehold.co/150x100/d1d1d1/4a4a4a?text=Code" alt="Article Thumbnail">
+                </div>
+            </div>
+        </div>
+
+        <div class="topics-sidebar">
+            <h3>Discover more topics</h3>
+            <div class="topics-grid">
+                <button class="topic-btn">Programming</button>
+                <button class="topic-btn">Technology</button>
+                <button class="topic-btn">Writing</button>
+            </div>
+            <a href="#" class="see-more">See more topics</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 Medium Clone. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileNav.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
 
