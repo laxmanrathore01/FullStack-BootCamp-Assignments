@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Bouncing Ball Animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="ball" class="ball"></div>
+    </div>
+
+    <script>
+        const ball = document.getElementById('ball');
+        let positionX = 0;
+        let positionY = 0;
+        let directionX = 1; // 1 for right, -1 for left
+        let directionY = 1; // 1 for down, -1 for up
+        const speed = 3; // Pixels per frame
+        const container = document.querySelector('.container');
+
+        function animateBall() {
+            // Update horizontal position
+            positionX += directionX * speed;
+
+            // Update vertical position
+            positionY += directionY * speed;
+
+            // Check for horizontal boundaries
+            if (positionX + ball.offsetWidth > container.offsetWidth || positionX < 0) {
+                directionX *= -1; // Reverse horizontal direction
+            }
+
+            // Check for vertical boundaries
+            if (positionY + ball.offsetHeight > container.offsetHeight || positionY < 0) {
+                directionY *= -1; // Reverse vertical direction
+            }
+
+            // Apply new position to the ball
+            ball.style.transform = `translate(${positionX}px, ${positionY}px)`;
+
+            // Request next animation frame
+            requestAnimationFrame(animateBall);
+        }
+
+        // Start the animation when the window loads
+        window.onload = function() {
+            animateBall();
+        };
+    </script>
+</body>
+</html>
 
