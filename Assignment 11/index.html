@@ -1,1 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Counter App</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the Inter font and overall body */
+        body {
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f4f8; /* Light gray background */
+            margin: 0;
+            padding: 16px; /* Add some padding for smaller screens */
+            box-sizing: border-box;
+        }
+
+        /* Ensure the main container doesn't get too wide on large screens */
+        .counter-container {
+            max-width: 400px;
+            width: 100%;
+        }
+
+        /* Button hover and active states for better UX */
+        .btn:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="counter-container bg-white p-8 rounded-xl shadow-lg text-center border-2 border-blue-200">
+        <h1 class="text-4xl font-extrabold mb-6 text-gray-800">Counter</h1>
+
+        <!-- Counter Display -->
+        <div id="counter-display" class="text-7xl font-bold mb-8 text-blue-600 bg-blue-50 p-6 rounded-lg select-none">
+            0
+        </div>
+
+        <!-- Buttons Container -->
+        <div class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 justify-center">
+            <!-- Decrement Button -->
+            <button id="decrement-btn" class="btn bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-200 ease-in-out flex-1">
+                Decrement
+            </button>
+
+            <!-- Reset Button -->
+            <button id="reset-btn" class="btn bg-gray-500 hover:bg-gray-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-200 ease-in-out flex-1">
+                Reset
+            </button>
+
+            <!-- Increment Button -->
+            <button id="increment-btn" class="btn bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-200 ease-in-out flex-1">
+                Increment
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Get references to the DOM elements
+        const counterDisplay = document.getElementById('counter-display');
+        const incrementBtn = document.getElementById('increment-btn');
+        const decrementBtn = document.getElementById('decrement-btn');
+        const resetBtn = document.getElementById('reset-btn');
+
+        // Initialize the counter value
+        let count = 0;
+
+        /**
+         * Updates the text content of the counter display with the current count.
+         */
+        function updateDisplay() {
+            counterDisplay.textContent = count;
+        }
+
+        // Event listener for the Increment button
+        incrementBtn.addEventListener('click', () => {
+            count++; // Increase the count by 1
+            updateDisplay(); // Update the display
+        });
+
+        // Event listener for the Decrement button
+        decrementBtn.addEventListener('click', () => {
+            // Ensure count does not go below 0 (optional, remove if negative numbers are allowed)
+            if (count > 0) {
+                count--; // Decrease the count by 1
+                updateDisplay(); // Update the display
+            }
+        });
+
+        // Event listener for the Reset button
+        resetBtn.addEventListener('click', () => {
+            count = 0; // Reset count to 0
+            updateDisplay(); // Update the display
+        });
+
+        // Initial display update when the page loads
+        updateDisplay();
+    </script>
+</body>
+</html>
 
