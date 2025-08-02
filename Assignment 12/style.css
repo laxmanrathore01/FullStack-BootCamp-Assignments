@@ -1,0 +1,46 @@
+/*
+  This CSS file provides custom styles for the Tic Tac Toe game.
+  Tailwind CSS is used for most of the layout and general styling,
+  but this file can be used for specific overrides or additional effects.
+*/
+
+/* Ensure the HTML and body take full height */
+html, body {
+    height: 100%;
+}
+
+/* Basic styling for the game board cells */
+/* The aspect-square class from Tailwind ensures cells are square */
+.cell {
+    /* Set a minimum height for cells to ensure they are visible even if empty */
+    min-height: 100px; /* Adjust as needed for larger/smaller cells */
+    color: #fff; /* Default text color for X and O */
+}
+
+/* Style for the 'X' mark */
+.cell.x-mark {
+    color: #3B82F6; /* Blue color for X */
+}
+
+/* Style for the 'O' mark */
+.cell.o-mark {
+    color: #EF4444; /* Red color for O */
+}
+
+/* Visual feedback for cells that are part of a winning line */
+.cell.winning-cell {
+    background-color: #10B981; /* Green background for winning cells */
+    animation: pulse 0.8s infinite alternate; /* Add a subtle pulse animation */
+}
+
+/* Keyframe animation for the winning cells pulse effect */
+@keyframes pulse {
+    from {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(16, 185, 129, 0.7);
+    }
+    to {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(16, 185, 129, 1);
+    }
+}
