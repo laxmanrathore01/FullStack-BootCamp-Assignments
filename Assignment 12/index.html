@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <!-- Link to the CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Load Tailwind CSS for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font for a better look */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen p-4">
+    <div class="bg-gray-800 p-8 rounded-xl shadow-2xl text-center max-w-md w-full">
+        <h1 class="text-4xl font-extrabold mb-6 text-blue-400">Tic Tac Toe</h1>
+
+        <!-- Game status display -->
+        <div id="status" class="text-2xl font-semibold mb-6 text-yellow-300">Player X's Turn</div>
+
+        <!-- Tic-Tac-Toe game board -->
+        <div id="gameBoard" class="grid grid-cols-3 gap-4 bg-gray-700 p-4 rounded-lg shadow-inner">
+            <!-- Each div represents a cell on the Tic-Tac-Toe board -->
+            <!-- Data-cell-index is used by JavaScript to identify the cell -->
+            <div class="cell bg-gray-600 flex items-center justify-center text-5xl font-bold rounded-lg cursor-pointer transition-all duration-200 hover:bg-gray-500 aspect-square" data-cell-index="0"></div>
+            <div class="cell bg-gray-600 flex items-center justify-center text-5xl font-bold rounded-lg cursor-pointer transition-all duration-200 hover:bg-gray-500 aspect-square" data-cell-index="1"></div>
+            <div class="cell bg-gray-600 flex items-center justify-center text-5xl font-bold rounded-lg cursor-pointer transition-all duration-200 hover:bg-gray-500 aspect-square" data-cell-index="2"></div>
+            <div class="cell bg-gray-600 flex items-center justify-center text-5xl font-bold rounded-lg cursor-pointer transition-all duration-200 hover:bg-gray-500 aspect-square" data-cell-index="3"></div>
+            <div class="cell bg-gray-600 flex items-center justify-center text-5xl font-bold rounded-lg cursor-pointer transition-all duration-200 hover:bg-gray-500 aspect-square" data-cell-index="4"></div>
+            <div class="cell bg-gray-600 flex items-center justify-center text-5xl font-bold rounded-lg cursor-pointer transition-all duration-200 hover:bg-gray-500 aspect-square" data-cell-index="5"></div>
+            <div class="cell bg-gray-600 flex items-center justify-center text-5xl font-bold rounded-lg cursor-pointer transition-all duration-200 hover:bg-gray-500 aspect-square" data-cell-index="6"></div>
+            <div class="cell bg-gray-600 flex items-center justify-center text-5xl font-bold rounded-lg cursor-pointer transition-all duration-200 hover:bg-gray-500 aspect-square" data-cell-index="7"></div>
+            <div class="cell bg-gray-600 flex items-center justify-center text-5xl font-bold rounded-lg cursor-pointer transition-all duration-200 hover:bg-gray-500 aspect-square" data-cell-index="8"></div>
+        </div>
+
+        <!-- Reset button -->
+        <button id="resetButton" class="mt-8 px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-75">
+            Reset Game
+        </button>
+    </div>
+
+    <!-- Link to the JavaScript file for game logic -->
+    <script src="script.js"></script>
+</body>
+</html>
 
